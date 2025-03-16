@@ -2,7 +2,7 @@ package net.jnah.repositories;
 
 import org.springframework.stereotype.Repository;
 
-@Repository
+@Repository("d")
 public class UserRepositoryImpl implements UserRepository {
 
     @Override

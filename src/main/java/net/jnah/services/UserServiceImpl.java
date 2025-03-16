@@ -1,13 +1,14 @@
 package net.jnah.services;
 
 import net.jnah.repositories.UserRepository;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-@Service
+@Service("service")
 public class UserServiceImpl implements UserService{
     private UserRepository userRepository; // loosely coupled
 
-    public UserServiceImpl(UserRepository userRepository) {
+    public UserServiceImpl(@Qualifier("d") UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
